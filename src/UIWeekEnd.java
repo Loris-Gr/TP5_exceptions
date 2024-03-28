@@ -44,15 +44,15 @@ class AppWeekEnd {
     /// Affiche un message de bienvenue
     public void bienvenue() {
 	System.out.println("╭────────────────────────────────────────────────────────────────────────────────────╮");
-	System.out.println("│ Bienvenue ! En week-end comme dans la semaine, les bons comptes font les bons amis. │");
+	System.out.println("│ Bienvenue ! En week-end comme dans la semaine, les bons comptes font les bons amis.│");
 	System.out.println("╰────────────────────────────────────────────────────────────────────────────────────╯");
     }
 
     /// Affiche un message d'au revoir
     public void au_revoir() {
-		System.out.println("╭────────────────────────────────────────────────────────────────────────────────────╮");
-		System.out.println("│ Au revoir ! Passez une agréable journée ! │");
-		System.out.println("╰────────────────────────────────────────────────────────────────────────────────────╯");
+		System.out.println("╭──────────────────────────────────────────╮");
+		System.out.println("│ Au revoir ! Passez une agréable journée !│");
+		System.out.println("╰──────────────────────────────────────────╯");
     }
 
 }
