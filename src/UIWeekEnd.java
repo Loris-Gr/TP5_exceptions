@@ -30,6 +30,8 @@ class AppWeekEnd {
 	while(!commande_faite) {
 	    System.out.println("Que voulez vous faire?");
 		System.out.println("P: afficher les personnes du week-end");
+		System.out.println("D: afficher les dépenses du week-end");
+		System.out.println("T: afficher le total des dépenses du week-end");
 	    System.out.println("Q: quitter");
 	    String commande_brute = System.console().readLine();
 	    String commande = commande_brute.strip().toLowerCase();
@@ -39,6 +41,12 @@ class AppWeekEnd {
 	    } 
 		if(commande.equals("p")) {
 			System.out.println(we.getAmis());
+		}
+		if(commande.equals("d")) {
+			System.out.println(we.getDepenses());
+		}
+		if(commande.equals("t")) {
+			System.out.println(we.totalDepenses());
 		}
 		else {
 		System.out.println("Commande '" + commande_brute + "' invalide.");
