@@ -29,13 +29,18 @@ class AppWeekEnd {
 	boolean commande_faite = false;
 	while(!commande_faite) {
 	    System.out.println("Que voulez vous faire?");
+		System.out.println("P: afficher les personnes du week-end");
 	    System.out.println("Q: quitter");
 	    String commande_brute = System.console().readLine();
 	    String commande = commande_brute.strip().toLowerCase();
 	    if(commande.equals("q")) {
-		quitter = true;
-		commande_faite = true;
-	    } else {
+			quitter = true;
+			commande_faite = true;
+	    } 
+		if(commande.equals("p")) {
+			System.out.println(we.getAmis());
+		}
+		else {
 		System.out.println("Commande '" + commande_brute + "' invalide.");
 	    }
 	}
