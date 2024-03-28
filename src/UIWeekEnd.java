@@ -29,11 +29,11 @@ class AppWeekEnd {
 	boolean commande_faite = false;
 	while(!commande_faite) {
 	    System.out.println("Que voulez vous faire?");
-		System.out.println("P: afficher les personnes du week-end");
-		System.out.println("D: afficher les dépenses du week-end");
-		System.out.println("T: afficher le total des dépenses du week-end");
-		System.out.println("M: afficher la dépense moyenne par personne du week-end");
-	    System.out.println("Q: quitter");
+		System.out.println("P: Menu personnes");
+		System.out.println("D: Menu dépenses");
+		System.out.println("T: Total dépenses ");
+		System.out.println("M: Moyenne des dépenses");
+	    System.out.println("Q: Quitter");
 	    String commande_brute = System.console().readLine();
 	    String commande = commande_brute.strip().toLowerCase();
 	    if(commande.equals("q")) {
@@ -71,5 +71,30 @@ class AppWeekEnd {
 		System.out.println("│ Au revoir ! Passez une agréable journée !│");
 		System.out.println("╰──────────────────────────────────────────╯");
     }
+
+	public void menu_personne() {
+		System.out.println("╭───────────────╮");
+		System.out.println("│   Menu amis   │");
+		System.out.println("|───────────────|");
+		System.out.println("│ L : Liste     │");
+		System.out.println("| S : Sélection |");
+		System.out.println("| Q : Quitter   |");
+		System.out.println("╰───────────────╯");
+		String commande_brute = System.console().readLine();
+	    String commande = commande_brute.strip().toLowerCase();
+		boolean commande_faite = false;
+		while(!commande_faite) {
+			if(commande.equals("q")) {
+				quitter = true;
+				commande_faite = true;
+			}
+			if(commande.equals("l")) {
+				System.out.println(we.getAmis());
+			}
+			else {
+				System.out.println("Commande '" + commande_brute + "' invalide.");
+				}
+			}
+	    }
 
 }
